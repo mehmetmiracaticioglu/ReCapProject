@@ -1,4 +1,5 @@
-﻿using DataAccess.Abstract;
+﻿using Core.DataAccess.EntityFramework;
+using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Text;
 
 namespace DataAccess.Concrete.EntitiyFramework
 {
-    public class EfCarBrandDal : ICarBrandDal
+    public class EfCarBrandDal : EfEntityRepositoryBase<Brand, RecapProjectDBContext>, ICarBrandDal
     {
         public void Add(Brand entity)
         {
