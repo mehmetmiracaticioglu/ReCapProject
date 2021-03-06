@@ -37,24 +37,19 @@ namespace DataAccess.Concrete.InMemory
         {
             return _car;
         }
-
-        public void GetById(Car car)
+        public List<Car> GetById(int carId)
         {
-            throw new NotImplementedException();
+            return _car.Where(c => c.Id == carId).ToList();
         }
 
         public void Update(Car car)
         {
             Car carToUpdate = _car.SingleOrDefault(c => c.Id == car.Id);
-
             carToUpdate.Id = car.Id;
             carToUpdate.BrandId = car.BrandId;
             carToUpdate.ColorId = car.ColorId;
             carToUpdate.DailyPrice = car.DailyPrice;
             carToUpdate.Description = car.Description;
-
-
-
 
         }
     }
