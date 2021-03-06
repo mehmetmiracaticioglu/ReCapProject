@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Entities.Abstract
+namespace DataAccess.Concrete.EntitiyFramework
 {
-    public interface IEntitiy
+    public class EfCarColorDal
     {
-
     }
 }
